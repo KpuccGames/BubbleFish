@@ -545,12 +545,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: {fileID: 1855194153}
   startWait: 1
-  spawnWait: 9
+  spawnWait: 7
   waves:
   - {fileID: 1502229384047594, guid: 62c18d945fd7dd546a3cc1bea8a43650, type: 2}
   - {fileID: 1863208798967366, guid: 43da5267b9712314aa1740cabb5e7477, type: 2}
   - {fileID: 1293251240654746, guid: e46d90e362aae27468472d75d6883679, type: 2}
+  buffsList:
+  - {fileID: 1671429298474930, guid: 8b755380d77d6384cbfa463673222812, type: 2}
+  - {fileID: 1149896390472512, guid: 60689143d3ea94a40bdef3bae1280a60, type: 2}
   wave: {fileID: 0}
+  buff: {fileID: 0}
 --- !u!4 &1638821066
 Transform:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ TagManager:
   - Boundary
   - Target
   - Bullet
+  - Buff
   layers:
   - Default
   - TransparentFX

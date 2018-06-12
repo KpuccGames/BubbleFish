@@ -27,13 +27,11 @@ public class Enemy_Mover : MonoBehaviour
     {
         if (gameObject.transform.position.x <= leftBoundary)
         {
-            Debug.Log("Двигаюсь вправо");
             float x = Mathf.MoveTowards(1f, 1f, 40 * Time.deltaTime);
             rb.velocity = new Vector3(x, 0.0f, -1);
         }
         if (gameObject.transform.position.x >= rightBoundary)
         {
-            Debug.Log("Двигаюсь влево");
             float x = Mathf.MoveTowards(-1f, -1f, 40 * Time.deltaTime);
             rb.velocity = new Vector3(x, 0.0f, -1);
         }

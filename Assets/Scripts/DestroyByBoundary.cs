@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class DestroyByBoundary : MonoBehaviour
 {
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
-        Destroy(other.gameObject);
+        if(other.tag != "Buff")
+        {
+            Destroy(other.gameObject);
+        }
     }
 
 }

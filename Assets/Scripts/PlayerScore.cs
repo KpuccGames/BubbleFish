@@ -54,15 +54,9 @@ public class PlayerScore : MonoBehaviour
         speedLevel = PlayerPrefs.GetInt("speedLevel", speedLevel);
         powerLevel = PlayerPrefs.GetInt("powerLevel", powerLevel);
 
-        Debug.Log("Скорость выстрелов = " + fireRate);
-        Debug.Log("Мощь выстрелов = " + bulletPower);
-        Debug.Log("Уровень скорости = " + speedLevel);
-        Debug.Log("Уровень мощности = " + powerLevel);
-
-
         pointsText.text ="Points: " + points.ToString();
 
-        powerCoef = bulletPower;
+        powerCoef = (float) Math.Pow(2, (powerLevel - 1)); //bulletPower;
         speedCoef = 1 + (0.4f * speedLevel);
 
         /// Листенеры кнопок
@@ -73,6 +67,7 @@ public class PlayerScore : MonoBehaviour
         speedUp.onClick.AddListener(SpeedUp);
         resetGame.onClick.AddListener(ResetGame);
         ///
+        Debug.Log(powerCoef);
     }
 
     private void Update()
@@ -130,7 +125,7 @@ public class PlayerScore : MonoBehaviour
             PlayerPrefs.SetInt("power", bulletPower);
             Debug.Log("Мощь = " + bulletPower);
             Debug.Log("Уровень мощи = " + powerLevel);
-            powerCoef = bulletPower;
+            powerCoef = (float)Math.Pow(2, (powerLevel - 1)); //bulletPower;
             pointsText.text = "Points: " + points.ToString();
         }
         else
@@ -153,5 +148,4 @@ public class PlayerScore : MonoBehaviour
     {
         SceneManager.LoadScene("GamePlay", LoadSceneMode.Single);
     }
-
 }
