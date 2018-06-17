@@ -6,7 +6,7 @@ public class BulletMover : MonoBehaviour
 {
     void Start ()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = transform.up * PlayerScore.bulletSpeed;
+        gameObject.GetComponent<Rigidbody>().velocity = transform.right * PlayerScore.bulletSpeed;
     }
 
     private void OnTriggerEnter(Collider other)
